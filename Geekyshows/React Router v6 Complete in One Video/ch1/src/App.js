@@ -8,8 +8,11 @@ import Login from './components/pages/Login';
 import Navbar from './components/Navbar';
 
 function App() {
-  // const isLogin = false;
-  const isLogin = true;
+  const isLogin = false;
+  // const isLogin = true;
+  const data = {
+    'st': 'User not logged in'
+  }
 
   return (
     <>
@@ -22,7 +25,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/post/:category' element={<Post />} />
           <Route path='/post/:category/:id' element={<Post />} />
-          <Route path='/dashboard' element={isLogin ? <Dashboard /> : <Navigate to="/login" replace />} />
+          <Route path='/dashboard' element={isLogin ? <Dashboard /> : <Navigate to="/login" state={data} replace />} />
           <Route path='/login' element={<Login />} />
           
           <Route path='*' element={<h1>Error 404 Page not found !!</h1>} />
