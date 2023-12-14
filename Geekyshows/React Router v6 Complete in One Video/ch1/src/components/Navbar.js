@@ -24,6 +24,9 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/contact" style={({isActive}) => {return {backgroundColor: isActive ? 'red' : ''}}}>Contact</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/post/mobile" style={({isActive}) => {return {backgroundColor: isActive ? 'red' : ''}}}>Post</NavLink>
+                </li>
             </ul>
         </>
     );
