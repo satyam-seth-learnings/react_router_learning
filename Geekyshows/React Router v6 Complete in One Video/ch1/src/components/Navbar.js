@@ -27,6 +27,9 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/post/mobile" style={({isActive}) => {return {backgroundColor: isActive ? 'red' : ''}}}>Post</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/post/mobile/1" style={({isActive}) => {return {backgroundColor: isActive ? 'red' : ''}}}>Post with ID</NavLink>
+                </li>
             </ul>
         </>
     );
