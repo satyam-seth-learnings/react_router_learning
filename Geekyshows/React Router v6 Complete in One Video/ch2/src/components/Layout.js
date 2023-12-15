@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Layout = () => {
     return (
@@ -18,6 +18,7 @@ const Layout = () => {
                     <NavLink to="/post" style={({ isActive }) => { return { backgroundColor: isActive ? 'red' : '' } }}>Post</NavLink>
                 </li>
             </ul>
+            <Outlet />
         </>
     );
 }
